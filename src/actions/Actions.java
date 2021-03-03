@@ -30,3 +30,4 @@ public class Actions {
         return driver.findElement(locator).getText();
     }
 }
+

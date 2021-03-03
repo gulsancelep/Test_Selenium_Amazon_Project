@@ -16,7 +16,7 @@ public class TestAmazonProject{
      */
 
     @Test
-    public void testAmazonProject() throws InterruptedException {
+    public void testAmazonProject() {
         WebDriver obj = new ChromeDriver();
         obj.get("https://www.amazon.com");
         obj.manage().window().maximize();

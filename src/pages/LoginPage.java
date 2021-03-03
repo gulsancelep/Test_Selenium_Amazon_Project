@@ -32,3 +32,4 @@ public class LoginPage extends Actions {
         click(SIGN_IN);
     }
 }
+

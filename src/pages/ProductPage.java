@@ -28,3 +28,4 @@ public class ProductPage extends Actions {
         Assert.assertEquals(is_checking(ADDED_TO_CART),ACTUAL);
     }
 }
+
