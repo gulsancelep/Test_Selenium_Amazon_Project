@@ -16,16 +16,18 @@ public class LoginPage extends Actions {
         super(driver);
     }
 
-
     public void usernameWrite() {
         input(USERNAME, username);
     }
+
     public void passwordWrite() {
         input(PASSWORD, password);
     }
+
     public void continueClick() {
         click(CONTINUE);
     }
+
     public void signIn() {
         click(SIGN_IN);
     }

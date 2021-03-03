@@ -16,7 +16,6 @@ public class ProductPage extends Actions {
         super(driver);
     }
 
-
     public void  addToCart() {
         click(ADD_TO_CART);
     }

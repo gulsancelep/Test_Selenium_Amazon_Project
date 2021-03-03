@@ -15,7 +15,6 @@ public class CartPage extends Actions {
         super(driver);
     }
 
-
     public void  deleteProduct() {
         click(DELETE);
     }

@@ -14,7 +14,6 @@ public class CategoryPage extends Actions {
         super(driver);
     }
 
-
     public void  productClick() {
         click(PRODUCT);
     }
