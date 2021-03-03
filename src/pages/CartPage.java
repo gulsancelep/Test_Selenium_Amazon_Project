@@ -22,6 +22,5 @@ public class CartPage extends Actions {
 
     public void  isDeletedProduct() {
         Assert.assertEquals(is_checking(DELETED_PRODUCT),ACTUAL);
-
     }
 }

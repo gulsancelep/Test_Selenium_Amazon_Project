@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 public class CategoryPage extends Actions {
 
     private  static  final By PRODUCT = By.xpath("((//div[@data-index = 2])[1]//a)[1]");
-    private  static  final String IS_SEARCHING_PAGE = "https://www.amazon.com/s?k=samsung&ref=nb_sb_noss_2";
+    private  static  final String IS_SEARCHING_PAGE = "https://www.amazon.com/s?k=Samsung&ref=nb_sb_noss";
 
 
     public CategoryPage(WebDriver driver) {

@@ -46,5 +46,4 @@ public class TestAmazonProject{
         cartPage.deleteProduct();
         cartPage.isDeletedProduct();
     }
-
 }
