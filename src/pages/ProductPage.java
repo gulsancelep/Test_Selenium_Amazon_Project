@@ -1,31 +1,32 @@
 package pages;
 import actions.Actions;
-import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 
 public class ProductPage extends Actions {
 
     private  static  final By ADD_TO_CART = By.id("add-to-cart-button");
     private  static  final By CART_PAGE = By.id("nav-cart-count");
-    private  static  final By ADDED_TO_CART = By.linkText("Added to Cart");
-    private  static  final String ACTUAL = "Added to Cart";
+    private  static  final By RANDOM_PRODUCT = By.cssSelector("img[data-image-latency='s-product-image']");
 
 
     public ProductPage(WebDriver driver) {
         super(driver);
     }
 
-
     public void  addToCart() {
-        click(ADD_TO_CART);
+        try {
+            click(ADD_TO_CART);
+        } catch (Exception ignored) {
+            ((JavascriptExecutor)driver).executeScript("window.history.go(-1)");
+            select_random(RANDOM_PRODUCT);
+            addToCart();
+        }
     }
 
     public void  goToCartPage() {
         click(CART_PAGE);
     }
-
-    public void  is_add_to_cart() {
-        Assert.assertEquals(is_checking(ADDED_TO_CART),ACTUAL);
-    }
 }
+

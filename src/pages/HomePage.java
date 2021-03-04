@@ -7,9 +7,9 @@ import org.openqa.selenium.WebDriver;
 public class HomePage extends Actions {
 
     private static final By NAV_SIGN_IN = By.id("nav-link-accountList");
-    private  static  final String search_input = "Samsung";
-    private  static  final By SEARCHING = By.id("twotabsearchtextbox");
-    private  static  final By SEARCH_CLICK = By.id("nav-search-submit-button");
+    private  static  final By MAIN_CATEGORY = By.cssSelector("#hmenu-content > ul.hmenu.hmenu-visible > li");
+    private  static  final By NAVBAR = By.cssSelector("#nav-hamburger-menu > i");
+    private  static  final By SUBCATEGORY = By.cssSelector("#hmenu-content > ul.hmenu.hmenu-visible.hmenu-translateX > li");
 
 
     public HomePage(WebDriver driver) {
@@ -24,8 +24,9 @@ public class HomePage extends Actions {
         Assert.assertEquals("https://www.amazon.com/", driver.getCurrentUrl());
     }
 
-    public void searching() {
-        input(SEARCHING, search_input);
-        click(SEARCH_CLICK);
+    public void randomCategory() {
+        click(NAVBAR);
+        select_random(MAIN_CATEGORY);
+        select_random(SUBCATEGORY);
     }
 }

@@ -16,7 +16,7 @@ public class TestAmazonProject{
      */
 
     @Test
-    public void testAmazonProject() throws InterruptedException {
+    public void testAmazonProject() {
         WebDriver obj = new ChromeDriver();
         obj.get("https://www.amazon.com");
         obj.manage().window().maximize();
@@ -31,20 +31,17 @@ public class TestAmazonProject{
         loginPage.passwordWrite();
         loginPage.signIn();
 
-        homePage.searching();
+        homePage.randomCategory();
 
         CategoryPage categoryPage = new CategoryPage(obj);
-        categoryPage.isSearchingPage();
         categoryPage.productClick();
 
         ProductPage productPage = new ProductPage(obj);
         productPage.addToCart();
-        productPage.is_add_to_cart();
         productPage.goToCartPage();
 
         CartPage cartPage = new CartPage(obj);
+        cartPage.complete_shopping();
         cartPage.deleteProduct();
-        cartPage.isDeletedProduct();
     }
-
 }
